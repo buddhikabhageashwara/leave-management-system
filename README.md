@@ -1,2 +1,12 @@
 # leave-management-system
-this system is about to manage leaves of employees using an API, Android App, Web Application .
+
+This system is about to manage leaves of employees using an API, Android App, Web Application .
+
+Technologies 
+
+* spring 
+* java
+* jersy 
+* hibernate
+* oracle database 
+* react native - android 
