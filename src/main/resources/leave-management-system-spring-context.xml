@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <!--<bean id="propertyConfigurer"-->
+    <!--<bemployeeIDn id="propertyConfigurer"-->
           <!--class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
         <!--<property name="locations">-->
             <!--<list>-->
@@ -18,13 +18,13 @@
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/leave_management" />
+        <property name="url" value="jdbc:mysql://localhost:3306/leave_management?createDatabaseIfNotExist=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8" />
         <property name="username" value="root" />
         <property name="password" value="1234" />
     </bean>
 
     <!-- Hibernate 3 XML SessionFactory Bean definition-->
-    <!-- 	<bean id="hibernate3SessionFactory"
+    <!-- 	<bemployeeIDn id="hibernate3SessionFactory"
             class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
             <property name="dataSource" ref="dataSource" />
             <property name="mappingResources">
@@ -46,13 +46,16 @@
         <property name="annotatedClasses">
             <list>
                 <value>com.leave.management.system.model.Employee</value>
+                <value>com.leave.management.system.model.Leave</value>
+
             </list>
         </property>
         <property name="hibernateProperties">
             <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL57InnoDBDialect</prop>
                 <prop key="hibernate.current_session_context_class">thread</prop>
-                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.show_sql">true</prop>
             </props>
         </property>
     </bean>
