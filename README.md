@@ -10,3 +10,10 @@ Technologies
 * hibernate
 * oracle database 
 * react native - android 
+* anguler js
+
+References 
+
+https://dzone.com/articles/what-is-nodejs-for-java-developers
+https://adrianmejia.com/blog/2014/09/28/angularjs-tutorial-for-beginners-with-nodejs-expressjs-and-mongodb/
+
